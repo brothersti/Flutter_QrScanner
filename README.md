@@ -1,16 +1,25 @@
-# qr_reader
+# 📱 QR Scanner GeoApp
 
-A new Flutter project.
+Una aplicación Flutter que permite escanear códigos QR y visualizar coordenadas geográficas (latitud y longitud) en pantalla.
 
-## Getting Started
+## 🚀 Funcionalidades
 
-This project is a starting point for a Flutter application.
+- 📷 Escaneo de códigos QR en tiempo real.
+- 🌍 Visualización clara de coordenadas extraídas.
+- 🧭 Compatible con enlaces geográficos tipo `geo:lat,long`.
+- 🗺️ Posibilidad de abrir las coordenadas en Google Maps (opcional).
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Tecnologías usadas
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Flutter 3.x
+- Dart 3.x
+- [qr_code_scanner](https://pub.dev/packages/qr_code_scanner)
+- [url_launcher](https://pub.dev/packages/url_launcher) (opcional, para abrir en mapas)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Instalación
+
+```bash
+git clone https://github.com/TU_USUARIO/qr-geo-scanner.git
+cd qr-geo-scanner
+flutter pub get
+flutter run
