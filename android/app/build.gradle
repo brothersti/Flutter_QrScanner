@@ -5,6 +5,12 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
+def keyProperties = new Properties()
+def keyPropertiesFile = rootProject.file("local.properties")
+if (keyPropertiesFile.exists()) {
+    keyProperties.load(new FileInputStream(keyPropertiesFile))
+}
+
 android {
     namespace = "com.example.qr_reader"
     compileSdk = flutter.compileSdkVersion
@@ -28,6 +34,8 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        resValue "string", "MAPS_API_KEY", keyProperties['MAPS_API_KEY']
+
     }
 
     buildTypes {
